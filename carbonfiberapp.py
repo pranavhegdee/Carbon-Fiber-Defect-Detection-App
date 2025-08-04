@@ -13,7 +13,7 @@ st.set_page_config(page_title="Carbon Fiber Explorer", layout="wide")
 
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model(r"C:\Users\prana\OneDrive\ドキュメント\Desktop\new\carbon_fiber_defect_detection_model2.h5", compile=False)
+    model = tf.keras.models.load_model(r"carbon_fiber_defect_detection_model2.h5", compile=False)
     return model
 
 model = load_model()
@@ -245,3 +245,4 @@ elif page == "🎥 3D Carbon Fiber Weave Model":
 
     fig = go.Figure(data=[surface], layout=layout)
     st.plotly_chart(fig, use_container_width=True)
+
