@@ -1,33 +1,44 @@
 # 🧠 Carbon Fiber Defect Detection and Classification App
 
-A Streamlit-based AI-powered web application for **real-time defect detection** and **classification** in carbon fiber composite materials. The system supports **uploaded** inputs, and is capable of identifying various surface defects using state-of-the-art deep learning models.
+
+A **Streamlit-based interactive app** to detect, classify, and analyze defects in **carbon fiber composites**, perform **SEM image evaluations**, and simulate **3D carbon fiber weave structures**.
+
+Powered by:
+- **TensorFlow** (defect detection)
+- **Google Gemini Pro (Generative AI)** for intelligent classification & root cause analysis
+- **Plotly** for 3D visualization
+- **Streamlit** for intuitive interaction
 
 ---
 
 ## 🚀 Features
 
-- 🔍 **Defect Detection**  
-  Identifies and localizes carbon fiber surface defects like:
-  - Cracks
-  - Delamination
-  - Fiber pull-out
-  - Burnt patches
+### 🛠️ Defect Detection
+- Upload a carbon fiber image
+- TensorFlow CNN detects presence of visual surface defects
+- Returns probability/confidence score
 
-- 🧠 **Defect Classification**  
-  Classifies localized defects into one of the categories.
+### 🔍 Defect Classification + Root Cause (via Gemini)
+- Upload defect image
+- Gemini classifies defect type and predicts likely root cause (e.g., poor curing, pressure mismanagement)
+- Lightweight generative model (Gemini 2 Flash)
 
-- 📸 **Input Mode**
-  - Upload images from your device
+### 🔬 SEM Image Analysis
+- Analyze SEM images of composites
+- Gemini returns:
+  - Observed microstructural features (voids, cracks, fiber pull-out)
+  - Potential material issues
+  - Recommendations
 
-- 📊 **Performance Metrics**  
-  Model evaluated using:
-  - Accuracy, Precision, **Recall**, F1 Score
-  - Confusion matrix and ROC curves
+### 🎥 3D Weave Simulation
+- Interactive 3D carbon fiber weave visualization
+- Simulates a sinusoidal weave structure using Plotly
+- Explore weave geometry and interlacing patterns
 
-- 🧾 **Bounding Box Visualization**
-  YOLOv8 annotations (if enabled) for real-time visualization of defects
-
-- 💾 **Download Results**
-  Processed images and prediction logs can be downloaded
+### 📚 Carbon Fiber Knowledge Hub
+- Overview of carbon fiber materials
+- Interactive breakdown of **manufacturing steps**:
+  - Raw material → spinning → stabilization → carbonization → surface treatment → sizing → weaving
+- Linked visuals + flowcharts
 
 ---
